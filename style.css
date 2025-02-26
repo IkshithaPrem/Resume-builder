@@ -1,0 +1,297 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9ecef;
+    color: #343a40;
+    line-height: 1.6; /* Adjusted line height */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 0.9rem; /* Base font size for the body */
+}
+
+/* Link Open Sans font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+header, footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1.8em 0; /* Slightly reduced padding */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 35px auto; /* Slightly reduced margin */
+    padding: 35px; /* Slightly reduced padding */
+    background-color: #fff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    flex: 1;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 280px; /* Slightly reduced width */
+    padding-right: 35px; /* Slightly reduced padding */
+    border-right: 2px solid #d3d3d3;
+}
+
+.section-list {
+    list-style: none;
+    padding: 0;
+}
+
+.section-list li {
+    margin-bottom: 13px; /* Slightly reduced margin */
+}
+
+.section-list a {
+    text-decoration: none;
+    color: #34495e;
+    display: block;
+    padding: 11px 16px; /* Slightly reduced padding */
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-size: 0.95rem; /* Slightly smaller font size */
+}
+
+.section-list a:hover {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    border-color: #95a5a6;
+}
+
+/* Content Styles */
+.content {
+    flex: 1;
+    padding-left: 35px; /* Slightly reduced padding */
+}
+
+section {
+    margin-bottom: 45px; /* Slightly reduced margin */
+}
+
+h2 {
+    border-bottom: 3px solid #34495e;
+    padding-bottom: 9px; /* Slightly reduced padding */
+    margin-bottom: 28px; /* Slightly reduced margin */
+    color: #2c3e50;
+    font-size: 2rem; /* Reduced heading size */
+    font-weight: 600;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px; /* Slightly reduced margin */
+    font-weight: 600;
+    color: #34495e;
+    font-size: 0.9rem; /* Smaller label font size */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 12px; /* Slightly reduced padding */
+    margin-bottom: 16px; /* Slightly reduced margin */
+    border: 1px solid #95a5a6;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 0.95rem; /* Smaller input font size */
+    color: #34495e;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+textarea {
+    height: 140px; /* Slightly reduced height */
+    resize: vertical;
+}
+
+/* Style for Work Experience, Education, Award, and Project entries */
+.work-experience-entry,
+.education-entry,
+.award-entry,
+.project-entry {
+    border: 1px solid #95a5a6;
+    padding: 23px; /* Slightly reduced padding */
+    margin-bottom: 23px; /* Slightly reduced margin */
+    border-radius: 10px;
+    background-color: #f0f3f4;
+}
+
+/* Style for Remove buttons */
+.remove-work-experience,
+.remove-education,
+.remove-award,
+.remove-project {
+    background-color: #e74c3c;
+    color: white;
+    padding: 11px 18px; /* Slightly reduced padding */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 18px; /* Slightly reduced margin */
+    transition: background-color 0.3s;
+    font-weight: 600;
+    font-size: 0.85rem; /* Smaller button font size */
+}
+
+.remove-work-experience:hover,
+.remove-education:hover,
+.remove-award:hover,
+.remove-project:hover {
+    background-color: #c0392b;
+}
+
+/* Style for Add buttons */
+#add-work-experience,
+#add-education,
+#add-award,
+#add-project {
+    background-color: #27ae60;
+    color: white;
+    padding: 13px 22px; /* Slightly reduced padding */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 28px; /* Slightly reduced margin */
+    transition: background-color 0.3s;
+    font-weight: 600;
+    font-size: 0.9rem; /* Smaller button font size */
+}
+
+
+
+#download-button:hover
+#add-work-experience:hover,
+#add-education:hover,
+#add-award:hover,
+#add-project:hover {
+    background-color: #219653;
+}
+
+/* Footer Style */
+footer {
+    margin-top: auto;
+    font-size: 0.9rem; /* Smaller footer font size */
+    color: #7f8c8d;
+}
+/* style.css */
+
+/* save button styles */
+.save-button-container {
+    text-align: center; /* Center the button horizontally */
+    margin-bottom: 20px; /* Add some space below the button */
+}
+
+#save-button {
+    background-color: #3498db; /* Blue color */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+#download-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#download-button:hover {
+    background-color: darkgreen;
+}
+
+#save-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+#save-button:active {
+    transform: scale(0.95); /* Slightly shrink the button when clicked */
+    box-shadow: none; /* Remove shadow when clicked */
+}
+
+/* style.css */
+
+/* General Styles */
+/* ... Your existing general styles ... */
+
+/* Resume Template Preview Area */
+.resume-template {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    font-family: 'Open Sans', sans-serif; /* Use the same font as the rest of the page */
+    line-height: 1.4;
+}
+
+.resume-template h1 {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+.resume-template h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.resume-template p {
+    margin-bottom: 10px;
+}
+
+
+
+/* save button styles */
+/* ... Your existing save button styles ... */
+
+/* Responsive Design (Improved) */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 28px; /* Slightly reduced padding */
+        margin: 28px auto; /* Slightly reduced margin */
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        padding-right: 0;
+        margin-bottom: 28px; /* Slightly reduced margin */
+    }
+
+    .content {
+        width: 100%;
+        padding-left: 0;
+    }
+}

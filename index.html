@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+<header>
+    <h1>Resume Builder</h1>
+</header>
+
+<main>
+    <div class="save-button-container">
+        <button type="button" id="download-button" onclick="downloadResume()" >Download Resume</button>
+        </div>
+
+
+
+    <aside class="sidebar">
+        <h2>Resume Sections</h2>
+        <ul class="section-list">
+            <li><a href="#personal-info">Personal Information</a></li>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#work-experience">Work Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#awards">Awards & Honors</a></li>
+        </ul>
+    </aside>
+
+    <div id="resume-preview">
+        <!-- Resume content here -->
+    </div>
+    
+
+    <section class="content">
+        <section id="personal-info">
+            <h2>Personal Information</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone"><br><br>
+        </section>
+
+        <section id="summary">
+            <h2>Summary</h2>
+            <textarea id="summary-text" placeholder="Write a brief summary of your skills and experience."></textarea>
+        </section>
+
+        <section id="work-experience">
+            <h2>Work Experience</h2>
+            <div id="work-experience-container">
+                <!-- Work experience entries will be added here -->
+            </div>
+            <button type="button" id="add-work-experience">Add Work Experience</button>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div id="education-container">
+                <!-- Education entries will be added here -->
+            </div>
+            <button type="button" id="add-education">Add Education</button>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <label for="skills-input">Enter skills, separated by commas:</label>
+            <input type="text" id="skills-input" name="skills-input">
+            <p>Example: JavaScript, Python, Communication, Teamwork</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div id="projects-container">
+                <!-- Project entries will be added here -->
+            </div>
+            <button type="button" id="add-project">Add Project</button>
+        </section>
+
+        <section id="awards">
+            <h2>Awards & Honors</h2>
+            <div id="awards-container">
+                <!-- Awards entries will be added here dynamically -->
+            </div>
+            <button type="button" id="add-award">Add Award</button>
+        </section>
+    </section>
+</main>
+
+<footer>>
+    <p>© 2024 Resume Builder</p>
+</footer>
+
+<script src="script.js"></script> <!-- Link to JavaScript file -->
