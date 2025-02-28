@@ -410,43 +410,42 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Education Logic (Similar to Work Experience)
     const addEducationButton = document.getElementById('add-education');
-    const educationContainer = document.getElementById('education-container');
-    
-    if (addEducationButton && educationContainer) {
-        addEducationButton.addEventListener('click', function() {
-            const educationDiv = document.createElement('div');
-            educationDiv.classList.add('education-entry');
-    
-            educationDiv.innerHTML = `
-                <label for="institution">Institution:</label>
-                <input type="text" id="institution" name="institution"><br>
-    
-                <label for="degree">Degree:</label>
-                <input type="text" id="degree" name="degree"><br>
-    
-                <label for="education-location">Location:</label>
-                <input type="text" id="education-location" name="education-location"><br>
-    
-                <label for="graduation-date">Graduation Date:</label>
-                <input type="date" id="graduation-date" name="graduation-date"><br>
-    
-                <label for="education-description">Description:</label>
-                <textarea id="education-description" name="job-description"></textarea><br>
-    
-                <button type="button" class="remove-education">Remove</button>
-            `;
-    
-            educationContainer.appendChild(educationDiv);
-    
-            const removeButton = educationDiv.querySelector('.remove-education');
-            removeButton.addEventListener('click', function() {
-                educationContainer.removeChild(educationDiv);
-                saveData(); // Call saveData to update localStorage after removing an entry
-            });
+const educationContainer = document.getElementById('education-container');
+
+if (addEducationButton && educationContainer) {
+    addEducationButton.addEventListener('click', function() {
+        const educationDiv = document.createElement('div');
+        educationDiv.classList.add('education-entry');
+
+        educationDiv.innerHTML = `
+            <label>Institution:</label>
+            <input type="text" name="institution"><br>
+
+            <label>Degree:</label>
+            <input type="text" name="degree"><br>
+
+            <label>Location:</label>
+            <input type="text" name="education-location"><br>
+
+            <label>Graduation Date:</label>
+            <input type="date" name="graduation-date"><br>
+
+            <label>Description:</label>
+            <textarea name="education-description"></textarea><br>
+
+            <button type="button" class="remove-education">Remove</button>
+        `;
+
+        educationContainer.appendChild(educationDiv);
+
+        const removeButton = educationDiv.querySelector('.remove-education');
+        removeButton.addEventListener('click', function() {
+            educationContainer.removeChild(educationDiv);
+            saveData(); // Call saveData to update localStorage after removing an entry
         });
-    }
-    
-    // Awards & Honors Logic
+    });
+}
+
     const addAwardButton = document.getElementById('add-award');
     const awardsContainer = document.getElementById('awards-container');
     
